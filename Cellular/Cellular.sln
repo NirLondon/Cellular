@@ -19,6 +19,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cellular.Common", "Cellular
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.Common", "CRM.Common\CRM.Common.csproj", "{DE923941-1B06-4216-B17B-F3428ACD4E81}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MainDal", "MainDal", "{D9042388-B9F1-4F59-B402-AAB3B9E7CE91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cellular.MainDal", "Cellular.MainDal\Cellular.MainDal.csproj", "{DCFC2E3C-1EC9-4F3F-ACFB-9D08494A74B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,10 @@ Global
 		{DE923941-1B06-4216-B17B-F3428ACD4E81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE923941-1B06-4216-B17B-F3428ACD4E81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE923941-1B06-4216-B17B-F3428ACD4E81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCFC2E3C-1EC9-4F3F-ACFB-9D08494A74B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCFC2E3C-1EC9-4F3F-ACFB-9D08494A74B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCFC2E3C-1EC9-4F3F-ACFB-9D08494A74B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCFC2E3C-1EC9-4F3F-ACFB-9D08494A74B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +48,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{DBFECAE6-6A36-44F0-8BAE-FB5070E91C58} = {69F06046-0F5E-49A7-AFF6-9C89F98177EF}
 		{DE923941-1B06-4216-B17B-F3428ACD4E81} = {64D2C020-AA9E-4F16-A4A0-AAEF98654909}
+		{DCFC2E3C-1EC9-4F3F-ACFB-9D08494A74B8} = {D9042388-B9F1-4F59-B402-AAB3B9E7CE91}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A65EEACA-CBEF-48B2-8CE9-5AAA600C38FF}
