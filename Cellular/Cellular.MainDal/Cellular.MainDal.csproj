@@ -50,12 +50,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CellularContext.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="CellularInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cellular.Common\Cellular.Common.csproj">
+      <Project>{DBFECAE6-6A36-44F0-8BAE-FB5070E91C58}</Project>
+      <Name>Cellular.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
