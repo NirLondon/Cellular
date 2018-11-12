@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Cellular.Common\Cellular.Common.csproj" />
+    <ProjectReference Include="..\CRM.Common\CRM.Common.csproj" />
   </ItemGroup>
 
 </Project>

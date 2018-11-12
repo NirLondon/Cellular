@@ -5,13 +5,13 @@ namespace Cellular.MainDal
     using System.Data.Entity;
     using System.Linq;
 
-    public class CellularContext : DbContext
+
+    public class CellularContext : DbContext, IDisposable
     {
         public CellularContext()
             : base("name=CellularContext")
         {
             Database.SetInitializer<CellularContext>(new CellularInitializer());
-
         }
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<Call> Calls { get; set; }
