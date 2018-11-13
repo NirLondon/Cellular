@@ -19,9 +19,10 @@ namespace Cellular.Server
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             // config container and registering
+
+            var iocManager = new BlIocManager();
             var container = new Container();
-            container.Register<IClientsManager, ClientManager>();
-            container.Register<IClientsRepository, ClientRepository>();
+            container.Register<IClientsManager>(()=> iocManager.GetInstanceOf<ClientManager>());
             container.RegisterMvcControllers();
 
             // Makes sure that the container configed properly

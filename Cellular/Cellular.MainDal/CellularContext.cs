@@ -6,7 +6,7 @@ namespace Cellular.MainDal
     using System.Linq;
 
 
-    public class CellularContext : DbContext, IDisposable
+    public class CellularContext : DbContext
     {
         public CellularContext()
             : base("name=CellularContext")

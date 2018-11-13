@@ -19,27 +19,16 @@ namespace CRM.Dal
         {
             using (var db = new CellularContext())
             {
+                if (db.Clients.Any(c => c.ClientId == client.ClientId))
+                {
+                    return new AddingClientResult(AddingClientFailureReason.)
+                }
+                
                 db.Clients.Add(client);
                 db.SaveChanges();
                 return new AddingClientResult(client);
             }
-            //CellularContext cellularContext = null;
-            //try
-            //{
-            //    cellularContext = new CellularContext();
-            //    cellularContext.Clients.Add(client);
-            //    cellularContext.SaveChanges();
-            //    return new AddingClientResult(client);
-            //}
-            //catch (Exception)
-            //{
-            //    throw;
-            //}
-
-            //finally
-            //{
-            //    cellularContext.Dispose();
-            //}
+        
           
         }
 
