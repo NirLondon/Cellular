@@ -14,13 +14,16 @@ namespace OptimalPackage.DAL
         {
             using (var context = new CellularContext())
             {
-                return context.Calls.Where(c => c.LineId==lineId&& c.)
+                return context.Calls.Where(c => c.LineId == lineId && c.CallDate >= from && c.CallDate <= to);
             }
         }
 
         public IEnumerable<Sms> GetSmsesOf(int lineId, DateTime from, DateTime to)
         {
-            throw new NotImplementedException();
+            using (var contest = new CellularContext())
+            {
+                return contest.Sms.Where(s => s.LineId == lineId && s.);
+            }
         }
     }
 }
