@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="SimpleInjector" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CRM.Common\CRM.Common.csproj" />
+    <ProjectReference Include="..\CRM.Dal\CRM.Dal.csproj" />
   </ItemGroup>
 
 </Project>
