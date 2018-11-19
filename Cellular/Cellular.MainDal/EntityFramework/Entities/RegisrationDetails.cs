@@ -4,12 +4,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cellular.MainDal.EntityFramework.Entities
 {
-    class RegisrationDetails
+    public class RegisrationDetails
     {
+        [Key]
+        [Column(Order = 0)]
         [ForeignKey(nameof(Registrator))]
         public int EmployeeID { get; set; }
         public Employee Registrator { get; set; }
 
+        [Key]
+        [Column(Order = 1)]
         public int ClientID { get; set; }
         public Client Client { get; set; }
 

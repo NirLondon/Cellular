@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Cellular.MainDal.EntityFramework.Entities
 {
-    class Call
+    public class Call
     {
         public int ID { get; set; }
 

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Cellular.MainDal.EntityFramework.Entities
 {
-    class SMS
+    public class SMS
     {
         public int ID { get; set; }
 

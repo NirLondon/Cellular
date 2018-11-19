@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cellular.MainDal.EntityFramework.Entities
 {
-    class Line
+    public class Line
     {
         public int ID { get; set; }
 
@@ -10,7 +11,10 @@ namespace Cellular.MainDal.EntityFramework.Entities
         public Client Client { get; set; }
 
         [Phone]
-        [Required]
+        [Required]        
         public string Number { get; set; }
+
+        public int PackageID { get; set; }
+        public Package Package { get; set; }
     }
 }

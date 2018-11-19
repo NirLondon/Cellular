@@ -3,8 +3,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cellular.MainDal.EntityFramework.Entities
 {
-    class Employee
+    public class Employee
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         [StringLength(maximumLength:15 ,MinimumLength = 6)]

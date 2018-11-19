@@ -1,6 +1,6 @@
 ﻿namespace Cellular.MainDal.EntityFramework.Entities
 {
-    enum ClientTypeEnum
+    public enum ClientTypeEnum
     {
         Private = 1,
         Business = 2,

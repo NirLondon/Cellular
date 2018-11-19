@@ -57,11 +57,21 @@
     <Compile Include="EntityFramework\Entities\ClientType.cs" />
     <Compile Include="EntityFramework\Entities\ClientTypeEmun.cs" />
     <Compile Include="EntityFramework\Entities\Employee.cs" />
+    <Compile Include="EntityFramework\Entities\FriendsDiscount.cs" />
     <Compile Include="EntityFramework\Entities\Line.cs" />
+    <Compile Include="EntityFramework\Entities\MinutesBank.cs" />
     <Compile Include="EntityFramework\Entities\Package.cs" />
     <Compile Include="EntityFramework\Entities\PackageInclud.cs" />
+    <Compile Include="EntityFramework\Entities\Payment.cs" />
     <Compile Include="EntityFramework\Entities\RegisrationDetails.cs" />
     <Compile Include="EntityFramework\Entities\SMS.cs" />
+    <Compile Include="Migrations\201811181900238_Init.cs" />
+    <Compile Include="Migrations\201811181900238_Init.Designer.cs">
+      <DependentUpon>201811181900238_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ModelConverters\CommonToEntity.cs" />
+    <Compile Include="ModelConverters\EntityToCommon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +86,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201811181900238_Init.resx">
+      <DependentUpon>201811181900238_Init.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

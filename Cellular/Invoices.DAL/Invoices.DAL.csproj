@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Cellular.MainDal\Cellular.MainDal.csproj" />
+    <ProjectReference Include="..\Invoices.Common\Invoices.Common.csproj" />
+  </ItemGroup>
+
 </Project>

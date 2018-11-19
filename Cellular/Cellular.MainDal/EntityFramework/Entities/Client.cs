@@ -3,12 +3,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Cellular.MainDal.EntityFramework.Entities
 {
-    class Client
+    public class Client
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         [ForeignKey(nameof(Type))]
-        public int ClientTypeID { get; set; }
+        public ClientTypeEnum ClientTypeID { get; set; }
         public ClientType Type { get; set; }
 
         [StringLength(maximumLength: 15, MinimumLength = 6)]

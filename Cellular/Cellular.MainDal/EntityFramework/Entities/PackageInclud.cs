@@ -7,7 +7,13 @@ using System.Threading.Tasks;
 
 namespace Cellular.MainDal.EntityFramework.Entities
 {
-    class PackageInclud
+    public class PackageInclud
     {
+        public int ID { get; set; }
+
+        public float Price { get; set; }
+
+        public int PackageID { get; set; }
+        public Package Package { get; set; }
     }
 }

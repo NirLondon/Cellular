@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace Cellular.MainDal.EntityFramework.Entities
 {
-    public class Package
+    [Table("MinutesBanks")]
+    public class MinutesBank : PackageInclud
     {
-        public int ID { get; set; }
-
-        public virtual ICollection<PackageInclud> PackageIncluds { get; set; }
+        public short MaxMinutes { get; set; }
     }
 }
