@@ -121,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BiController.cs" />
     <Compile Include="Controllers\CrmController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -146,8 +147,17 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Bi\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Bi.Bl\Bi.Bl.csproj">
+      <Project>{A5B2D48E-C387-47E2-95BF-C65D99DE328F}</Project>
+      <Name>Bi.Bl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bi.Common\Bi.Common.csproj">
+      <Project>{00DD802D-BCC1-47F5-AB9B-F496B5029B23}</Project>
+      <Name>Bi.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Cellular.Common\Cellular.Common.csproj">
       <Project>{dbfecae6-6a36-44f0-8bae-fb5070e91c58}</Project>
       <Name>Cellular.Common</Name>
@@ -159,10 +169,6 @@
     <ProjectReference Include="..\CRM.Common\CRM.Common.csproj">
       <Project>{DE923941-1B06-4216-B17B-F3428ACD4E81}</Project>
       <Name>CRM.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CRM.Dal\CRM.Dal.csproj">
-      <Project>{C2EC6ED9-AE9A-47B8-A1E0-5C8AF6F470EC}</Project>
-      <Name>CRM.Dal</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

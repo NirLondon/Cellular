@@ -1,22 +1,22 @@
-﻿using Cellular.Common.Interfaces;
-using Cellular.CRM.Common.Interfaces;
-using CRM.Dal;
+﻿using Bi.Common.Interfaces;
+using Bi.Dal;
+using Cellular.Common.Interfaces;
 using SimpleInjector;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CRM.Bl
+namespace Bi.Bl
 {
-    public class BlIocManager : IIocContainer
+    public class IocReportsContainer : IIocContainer
     {
         private Container _container;
 
-        public BlIocManager()
+        public IocReportsContainer()
         {
             _container = new Container();
-            _container.Register<IClientsRepository, ClientRepository>();
-            _container.Register<ClientManager>();
+            _container.Register<IReportsRepository, ReportsRepository>();
+            _container.Register<ReportManager>();
             _container.Verify();
         }
 

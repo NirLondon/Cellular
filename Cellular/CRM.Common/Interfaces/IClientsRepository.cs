@@ -11,5 +11,6 @@ namespace Cellular.CRM.Common.Interfaces
         AddingClientResult AddNewClient(Client client);
         bool EditClient(Client client);
         bool DeleteClient(int clientId);
+        Employee LoginEmployee(string identity,string password);
     }
 }

@@ -14,6 +14,7 @@ namespace Cellular.MainDal
             Database.SetInitializer<CellularContext>(new CellularInitializer());
         }
         public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Call> Calls { get; set; }
         public virtual DbSet<ClientType> ClientTypes { get; set; }
         public virtual DbSet<Line> Lines { get; set; }

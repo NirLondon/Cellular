@@ -1,6 +1,7 @@
-﻿using Cellular.CRM.Common.Interfaces;
+﻿using Bi.Bl;
+using Bi.Common.Interfaces;
+using Cellular.CRM.Common.Interfaces;
 using CRM.Bl;
-using CRM.Dal;
 using SimpleInjector;
 using SimpleInjector.Integration.Web.Mvc;
 using System;
@@ -20,9 +21,11 @@ namespace Cellular.Server
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             // config container and registering
 
-            var iocManager = new BlIocManager();
+            var clientBlManager = new BlIocManager();
+            var reportBlManager = new IocReportsContainer();
             var container = new Container();
-            container.Register<IClientsManager>(()=> iocManager.GetInstanceOf<ClientManager>());
+            container.Register<IClientsManager>(()=> clientBlManager.GetInstanceOf<ClientManager>());
+            container.Register<IReportManager>(() => reportBlManager.GetInstanceOf<ReportManager>());
             container.RegisterMvcControllers();
 
             // Makes sure that the container configed properly

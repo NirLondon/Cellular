@@ -21,7 +21,7 @@ namespace CRM.Dal
             {
                 if (db.Clients.Any(c => c.ClientId == client.ClientId))
                 {
-                    return new AddingClientResult(AddingClientFailureReason.)
+                    return new AddingClientResult(AddingClientFailureReason.ClientAlreadyExist);
                 }
                 
                 db.Clients.Add(client);
@@ -34,12 +34,37 @@ namespace CRM.Dal
 
         public bool DeleteClient(int clientId)
         {
-            throw new NotImplementedException();
+            using (var db = new CellularContext())
+            {
+                var clientRemoved = db.Clients.FirstOrDefault(c => c.ClientId == clientId);
+                if (clientRemoved == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    db.Clients.Remove(clientRemoved);
+                    db.SaveChanges();
+                    return true;
+                }
+            }
         }
 
-        public bool EditClient(Cellular.Common.DTOs.Client client)
+        public bool EditClient(Client client)
         {
-            throw new NotImplementedException();
+            using (var db = new CellularContext())
+            {
+                var clientEdited = db.Clients.FirstOrDefault(c => c.ClientId == client.ClientId);
+                clientEdited.ClientName= 
+            }
+        }
+
+        public Employee LoginEmployee(string identity, string password)
+        {
+            using (var db = new CellularContext())
+            {
+                return db.Employees.FirstOrDefault(e => e.Identity == identity && e.Password == password);
+            }
         }
     }
 }

@@ -20,12 +20,17 @@ namespace CRM.Bl
 
         public bool DeleteClient(int clientId)
         {
-            throw new NotImplementedException();
+            return _clientsRepository.DeleteClient(clientId);
         }
 
         public bool EditClient(Client client)
         {
-            throw new NotImplementedException();
+            return _clientsRepository.EditClient(client);
+        }
+
+        public Employee LoginEmployee(string identity, string password)
+        {
+            return _clientsRepository.LoginEmployee(identity,password);
         }
     }
 }

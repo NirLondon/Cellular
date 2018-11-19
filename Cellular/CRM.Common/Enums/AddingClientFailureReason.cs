@@ -7,6 +7,6 @@ namespace Cellular.CRM.Common.Enums
     public enum AddingClientFailureReason
     {
         DatabaseConnectionFailed,
-        ExisitingClient
+        ClientAlreadyExist
     }
 }

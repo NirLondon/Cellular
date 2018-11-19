@@ -8,4 +8,9 @@
     <PackageReference Include="SimpleInjector" Version="4.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Bi.Common\Bi.Common.csproj" />
+    <ProjectReference Include="..\Bi.Dal\Bi.Dal.csproj" />
+  </ItemGroup>
+
 </Project>
