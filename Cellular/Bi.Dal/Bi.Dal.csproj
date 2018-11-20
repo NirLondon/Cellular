@@ -52,10 +52,6 @@
       <Project>{dbfecae6-6a36-44f0-8bae-fb5070e91c58}</Project>
       <Name>Cellular.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Cellular.MainDal\Cellular.MainDal.csproj">
-      <Project>{dcfc2e3c-1ec9-4f3f-acfb-9d08494a74b8}</Project>
-      <Name>Cellular.MainDal</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

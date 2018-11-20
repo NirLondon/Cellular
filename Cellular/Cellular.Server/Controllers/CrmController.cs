@@ -63,5 +63,7 @@ namespace Cellular.Server.Controllers
             _clientManager.DeleteClient(clientId);
             return View("Index");
         }
+
+        
     }
 }

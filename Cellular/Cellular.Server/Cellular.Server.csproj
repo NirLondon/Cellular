@@ -123,6 +123,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BiController.cs" />
     <Compile Include="Controllers\CrmController.cs" />
+    <Compile Include="Controllers\LinesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -148,6 +149,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Bi\" />
+    <Folder Include="Views\Lines\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bi.Bl\Bi.Bl.csproj">
